@@ -30,14 +30,25 @@ public class Solution_d1_3307_최장증가부분수열_서울8반_원범희 {
 		
 		for(int i=0;i<a;i++)
 		{
-			if(arr[0]<arr[i])
-			{
-				dp[i]++;
+			for(int j=i;j<a;j++){
+				if(arr[i]<arr[j])
+				{
+					dp[j]++;
+				}
 			}
 			
 		}
 		
-		System.out.println(Arrays.toString(dp));
+		int max=Integer.MIN_VALUE;
+		for(int i=0;i<a;i++)
+		{
+			if(max<dp[i])
+			{
+				max=dp[i];
+			}
+		}
+		
+		System.out.println(max);
 	}
 
 }
