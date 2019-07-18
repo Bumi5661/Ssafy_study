@@ -1,0 +1,34 @@
+package array1;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Solution_d1_1208_Flatten_서울8반_원범희 {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner sc =new Scanner(System.in);
+        int block[]=new int[100];
+        int dump=sc.nextInt();
+        int max=0,min = 0;
+        
+        for(int i=0;i<block.length;i++) {
+            block[i]=sc.nextInt();}
+        
+        for(int j=0;j<dump;j++) {
+            int m=Arrays.stream(block).max().getAsInt();
+            int n=Arrays.stream(block).min().getAsInt();
+        
+             for (int i=0; i<block.length; i++) {
+                   if (block[i]==m) {
+                       block[i]--;
+                       if (block[i]==n)
+                           block[i]++;
+                       break;
+                   }
+             }
+             max=m;min=n;
+        }System.out.println(max-min);
+    }
+
+}

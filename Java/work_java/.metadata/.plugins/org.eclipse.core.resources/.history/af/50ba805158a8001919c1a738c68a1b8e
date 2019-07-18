@@ -1,0 +1,16 @@
+
+public class OperatorTest {
+
+	public static void main(String[] args) {
+		
+		boolean a= true, b=false, c=true;
+		if(a&b)
+			System.out.println("a&b");
+		
+		if(a|b)
+			System.out.println("a|b");
+		if(a^b)
+			System.out.println("a^b");
+	}
+
+}

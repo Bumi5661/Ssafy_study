@@ -1,0 +1,21 @@
+
+public class MethodTest {
+	// 1.메소드 정의 후에  2.사용함
+	// hello():console에  "hello,java를 출력"
+	static void hello(){
+		System.out.println("Hello, java");
+	}
+	
+	//increase(): int형 변수 한개를 입력받아 1을 증가 시킨 후 그 값을 리턴
+	int increase(int a){
+		int x=++a;
+		return x;
+		}
+	public static void main(String[] args) {
+		//작성된 메소드 사용
+		int result=increase(88);
+		System.out.println(result);
+		hello();
+	}
+
+}

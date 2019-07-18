@@ -1,0 +1,64 @@
+package com.ssafy.java;
+
+import java.util.Scanner;
+
+public class ArrayTest {
+	static int[] List;
+	
+	static void input(int a)	//console로부터 입력 값을 받아서 배열에 저장
+	{
+		for(int i=0;i<List.length;i++)
+		{
+			List[i]=a;
+		}
+		
+	}
+	
+	static void print() {
+		for(int i=0;i<List.length;i++)
+		{
+			System.out.println(List[i]);
+		}
+	}
+	static void total() {
+		int result=0;
+		for(int i=0;i<List.length;i++)
+		{
+			result+=List[i];
+		}
+		System.out.println(result);
+	}
+	static void average() {
+		int result=0;
+		for(int i=0;i<List.length;i++)
+		{
+			result+=List[i];
+		}
+		System.out.println(result/List.length);
+	}
+	static void minnum() {
+		int min=Integer.MAX_VALUE;
+		for(int i=0;i<List.length-1;i++)
+		{
+			if(List[i]>List[i+1])
+				min=List[i+1];
+		}
+		System.out.println(min);
+	}
+//	static void selectionSort() {
+//		
+//	}
+	
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		int a=sc.nextInt();
+		input(a);//배열에 data 넣기
+		print();//배열안의 값 출력
+		total();//배열안의 값들 total
+		minnum();//배열안의 값 중 최소값
+		
+
+	}
+
+}

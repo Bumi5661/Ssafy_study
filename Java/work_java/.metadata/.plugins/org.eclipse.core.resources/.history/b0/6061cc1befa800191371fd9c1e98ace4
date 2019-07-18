@@ -1,0 +1,136 @@
+package com.ssafy.java;
+
+import java.util.Scanner;
+
+public class GameTest {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		
+		
+		System.out.println("가위바위보 게임을 시작합니다. 아래 보기 중 하나를 고르세요.");
+		System.out.println("1. 5판 3승");
+		System.out.println("2. 3판 2승.");
+		System.out.println("3. 1판 1승.");
+		System.out.println("번호를 입력하세요");
+		
+		
+		int input=sc.nextInt();
+		
+		
+		switch (input) {
+			case 1:
+				int cnt=0;
+				int cnt2=0;
+				do
+				{
+					int a=(int)(Math.random()*3)+1;
+					System.out.println("가위바위보 중 하나 입력:");
+					String gbb=sc.next();
+					switch (gbb) {
+					case "가위":
+						if(a==1) System.out.println("비겼습니다");
+						if(a==2) { System.out.println("졌습니다"); cnt++;};
+						if(a==3) { System.out.println("이겼습니다"); cnt2++;};
+						break;
+						
+					case "바위":
+						if(a==1) { System.out.println("이겼습니다"); cnt2++;};
+						if(a==2) System.out.println("비겼습니다");
+						if(a==3) { System.out.println("졌습니다"); cnt++;};
+						break;
+					case "보":
+						if(a==1) { System.out.println("졌습니다"); cnt++;};
+						if(a==2) { System.out.println("이겼습니다"); cnt2++;};
+						if(a==3) System.out.println("비겼습니다");
+						break;
+
+					default:
+						break;
+					}
+					
+					
+				}while(cnt==3 || cnt2==3);
+				
+				break;
+			
+			case 2:
+				int cnt3=0;
+				int cnt4=0;
+				do
+				{
+					int a=(int)(Math.random()*3)+1;
+					System.out.println("가위바위보 중 하나 입력:");
+					String gbb=sc.next();
+					switch (gbb) {
+					case "가위":
+						if(a==1) System.out.println("비겼습니다");
+						if(a==2) { System.out.println("졌습니다"); cnt3++;};
+						if(a==3) { System.out.println("이겼습니다"); cnt4++;};
+						break;
+						
+					case "바위":
+						if(a==1) { System.out.println("이겼습니다"); cnt4++;};
+						if(a==2) System.out.println("비겼습니다");
+						if(a==3) { System.out.println("졌습니다"); cnt3++;};
+						break;
+					case "보":
+						if(a==1) { System.out.println("졌습니다"); cnt3++;};
+						if(a==2) { System.out.println("이겼습니다"); cnt4++;};
+						if(a==3) System.out.println("비겼습니다");
+						break;
+
+					default:
+						break;
+					}
+					
+			
+				}while(cnt3==2 || cnt4==2);
+				
+				break;
+			
+			case 3:
+				int cnt5=0;
+				int cnt6=0;
+				do
+				{
+					int a=(int)(Math.random()*3)+1;
+					System.out.println("가위바위보 중 하나 입력:");
+					String gbb=sc.next();
+					switch (gbb) {
+					case "가위":
+						if(a==1) System.out.println("비겼습니다");
+						if(a==2) { System.out.println("졌습니다"); cnt5++;};
+						if(a==3) { System.out.println("이겼습니다"); cnt6++;};
+						break;
+						
+					case "바위":
+						if(a==1) { System.out.println("이겼습니다"); cnt6++;};
+						if(a==2) System.out.println("비겼습니다");
+						if(a==3) { System.out.println("졌습니다"); cnt5++;};
+						break;
+					case "보":
+						if(a==1) { System.out.println("졌습니다"); cnt5++;};
+						if(a==2) { System.out.println("이겼습니다"); cnt6++;};
+						if(a==3) System.out.println("비겼습니다");
+						break;
+
+					default:
+						break;
+					}
+					
+					
+				}while(cnt5==1 || cnt6==1);
+				
+				break;
+
+		default:
+			break;
+		}
+			
+
+	}
+
+}

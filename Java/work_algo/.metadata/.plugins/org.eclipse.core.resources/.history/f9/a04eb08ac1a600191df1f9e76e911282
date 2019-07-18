@@ -1,0 +1,52 @@
+package array1;
+import java.util.Scanner;
+import java.io.FileInputStream;
+
+public class Solution3 
+{
+	public static void main(String args[]) throws Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int a=0;
+		a=sc.nextInt();
+		
+		for(int i=0;i<a;i++)
+		{
+		Scanner sc1 = new Scanner(System.in);
+		String s= sc1.nextLine();
+		
+			
+			for(int j=0;i<s.length()-1;j++)
+				
+			{
+			
+				if(s.charAt(j)!=s.charAt(j+1))
+				{
+					if(s.charAt(j)=='1') {
+						System.out.println("2");
+						break;
+						}
+					else { 
+						System.out.println("1");
+						break;
+						}
+				}
+				else
+				{
+					if(s.charAt(0)=='1')
+					{
+						System.out.println("1");
+						break;
+					}
+					else {
+						System.out.println("0");
+						break;
+					}
+				}
+			
+			}
+		}
+	}
+}
+
+

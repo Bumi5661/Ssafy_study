@@ -1,0 +1,13 @@
+
+public class MethodTest {
+	// 1.메소드 정의 후에  2.사용함
+	// hello():console에  "hello,java를 출력"
+	static void hello(){
+		System.out.println("Hello, java");
+	}
+	public static void main(String[] args) {
+		//작성된 메소드 사용
+		hello();
+	}
+
+}

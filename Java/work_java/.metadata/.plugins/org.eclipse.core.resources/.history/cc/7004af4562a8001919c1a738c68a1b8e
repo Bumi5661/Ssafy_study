@@ -1,0 +1,51 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class 힘드러 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		int[] arr=new int[100];
+		
+		int dump=sc.nextInt();
+		
+		for(int i=0;i<100;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		Arrays.sort(arr);
+		
+		for(int i=0;i<dump;i++)
+		{
+			if(arr[0]==arr[99]) break;
+			else
+			{
+				if(arr[0]+1<=arr[1])
+					continue;
+				else
+				{
+					int tmp=arr[0];
+					arr[0]=arr[1];
+					arr[1]=tmp;
+				}
+				arr[0]++;
+				
+				if(arr[98]+1<=arr[99])
+					continue;
+				else
+				{
+					int tmp=arr[99];
+					arr[99]=arr[98];
+					arr[98]=tmp;
+				}
+				arr[99]--;
+	
+			}
+				
+		}
+		System.out.println(arr[99]-arr[0]);
+		
+	}
+}
+
+

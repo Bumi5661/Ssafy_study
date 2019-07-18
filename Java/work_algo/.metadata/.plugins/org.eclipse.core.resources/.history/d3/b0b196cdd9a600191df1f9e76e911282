@@ -1,0 +1,18 @@
+package array1;
+
+public class Hello {
+	public static void main(String[] args) {
+		System.out.println("Hello");
+
+		String h="Hello";
+		char ch='H';
+		if (h.charAt(0)!=ch)
+		{
+			System.out.println("q");
+		}
+		else
+			System.out.println("o");
+		
+	}
+
+}

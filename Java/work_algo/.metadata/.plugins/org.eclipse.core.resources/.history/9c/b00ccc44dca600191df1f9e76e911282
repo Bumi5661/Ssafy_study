@@ -1,0 +1,42 @@
+package array1;
+
+import java.util.Scanner;
+import java.io.FileInputStream;
+
+public class Solution_d1_1204_최빈수구하기_서울8반_원범희 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		
+		for(int i=0;i<a;i++)
+		{
+			int b=sc.nextInt();
+			
+			int arr[]=new int[1000];
+			int arrr[]=new int[100];
+			int max=0;
+			
+			for(int j=0;j<1000;j++)
+			{
+				int c=sc.nextInt();
+				arr[j]=c;
+			}
+			
+			for(int j=0;j<1000;j++)
+			{
+				arrr[arr[j]]++;
+			}
+			
+			for(int j=0;j<arrr.length;j++)
+			{
+				if(arrr[j]>=max)
+				{
+					max=arrr[j];
+				}
+			}
+		System.out.println(max);
+		}
+	}
+
+}

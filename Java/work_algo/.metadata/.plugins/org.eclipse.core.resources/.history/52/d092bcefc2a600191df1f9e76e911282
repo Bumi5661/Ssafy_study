@@ -1,0 +1,38 @@
+package array1;
+import java.util.Scanner;
+import java.io.FileInputStream;
+
+public class Solution3 
+{
+	public static void main(String args[]) throws Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int a=0;
+		a=sc.nextInt();
+		
+		for(int i=0;i<a;i++)
+		{
+		Scanner sc1 = new Scanner(System.in);
+		String s= sc1.nextLine();
+		int cnt=0;
+		char comp='0';
+		
+		for(int j=0;i<s.length()-1;j++)	
+			{
+				if(s.charAt(j)!=comp)
+				{
+					if(comp=='0')
+					{
+						comp='1';
+					}
+					else
+						comp='0';
+					cnt++;
+				}
+			}
+		System.out.println(cnt);
+		}
+	}
+}
+
+

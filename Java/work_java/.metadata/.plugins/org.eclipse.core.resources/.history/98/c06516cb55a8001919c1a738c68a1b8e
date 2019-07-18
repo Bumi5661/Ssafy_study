@@ -1,0 +1,28 @@
+
+public class HelloWorld {
+	//main() method: 실행 가능한 파일이 되기 위해 필요한 부분
+	public static void main(String[] args) {
+		
+		boolean flag=true;
+		
+		byte b=12;	//1 byte	-128~127
+		b=b+1; //리터럴(literal: 값)
+		short s=122;	//2byte
+		int i=12345; //4 byte
+		long l=12990088; //8 byte
+		char c='x'; // 2 byte //글자 1개를 저장하는 데이터 타입
+		
+		//실수형
+		//float f = 3.2;
+		double d=3.14;
+		
+		System.out.println(flag);
+        System.out.println(b);
+        System.out.println(s);
+        System.out.println(i);
+        System.out.println(l);
+        System.out.println(c);
+        System.out.println(d);
+	}
+
+}

@@ -1,0 +1,36 @@
+package array1;
+
+import java.util.Scanner;
+import java.io.FileInputStream;
+
+public class Solution_d1_3307_최장증가부분수열_서울8반_원범희 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		
+		for(int i=0;i<a;i++)
+		{
+			int b=sc.nextInt();
+			for(int j=0;j<b;j++)
+			{
+				String s=sc.next();
+				int tmp=1001;
+				int cnt=0;
+				for(int sl=s.length();sl<s.length();sl++)
+				{
+					if((s.charAt(sl)-'0')>(s.charAt(sl+1)-'0'))
+					{
+						sl++;
+					}
+					else
+					{
+						cnt++;
+					}
+				}
+			}
+			System.out.println(cnt);
+		}
+
+	}
+
+}

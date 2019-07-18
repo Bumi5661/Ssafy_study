@@ -1,0 +1,61 @@
+package array1;
+
+import java.io.FileInputStream;
+import java.util.Scanner;
+
+
+public class Solution_d1_1208_Flatten_서울8반_원범희 {
+	public static void main(String[] args) throws Exception {
+		//System.setIn(new FileInputStream("res/input_d1_1208.txt"));
+		Scanner sc = new Scanner(System.in);
+		int[] b=new int[3];
+		int a=sc.nextInt(); 	//dump 횟수
+		
+		for(int i=0;i<3;i++)
+		{
+			b[i]=sc.nextInt();
+		}
+		
+		int max=Integer.MIN_VALUE;
+		int min=Integer.MAX_VALUE;
+		int min_value1=0;
+		int max_value1=0;
+		for(int j=0;j<a;j++) 
+		{
+			int min_value=0;
+			int max_value=0;
+			for(int i=0;i<b.length;i++)
+			{
+				if(b[i]>=max)
+					{
+					max=b[i];
+					max_value=i;
+					}
+			}
+			for(int i2=0;i2<b.length;i2++)
+			{
+				if(b[i2]<=min) 
+				{
+					min=b[i2];
+					min_value=i2;
+				}
+			}
+			if(max_value==min_value) 
+			{
+				break;
+			}
+			else {
+			b[max_value]--;
+			b[min_value]++;	
+			}
+			System.out.println(b[max_value]);
+			System.out.println(b[min_value]);
+			
+		}
+		System.out.println(b[max_value1]-b[min_value1]);
+		
+		
+		
+		
+	}
+}
